@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+</style>
+
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script type="text/javascript">
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#s1')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+			
+		 $('#s2')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+			
+		 $('#s3')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+			
+		 $('#s4')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+</head>
+<body>
+  <input type='file' onchange="readURL(this);" />
+  <hr>
+  <p>
+    <canvas width="200" height="200"></canvas>
+    <img id="s1" src="#" alt="No Image Selected" />
+    <canvas width="200" height="200"></canvas>
+  </p>
+ <p>
+    <img id="s2" src="#" alt="" />
+    <canvas width="200" height="200"></canvas>
+    <img id="s3" src="#" alt="" />
+    </p>
+    <p>
+    <canvas width="200" height="200"></canvas>
+    <img id="s4" src="#" alt="" />
+    <canvas width="200" height="200"></canvas>
+    </p>
+</body>
+</html>
