@@ -4,7 +4,34 @@
 <style>
 * {
     box-sizing: border-box;
+    background-color: #000;
 }
+
+.rotateimg90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rotateimg180 {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rotateimg270 {
+  -webkit-transform:rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+body{  background-color: #000; }
 .row::after {
     content: "";
     clear: both;
@@ -73,21 +100,21 @@
 </style>
 </head>
 <body>
-  <input type='file' onchange="readURL(this);" />
+  <input type='file' onchange="readURL(this);"/>
   <hr>
   <p>
     <canvas width="200" height="200"></canvas>
-    <img id="s1" src="#" alt="No Image Selected" />
+    <img id="s1" src="#" alt=""/>
     <canvas width="200" height="200"></canvas>
   </p>
  <p>
-    <img id="s2" src="#" alt="" />
+    <img id="s2" src="#" alt="" class="rotateimg270" />
     <canvas width="200" height="200"></canvas>
-    <img id="s3" src="#" alt="" />
+    <img id="s3" src="#" alt="" class="rotateimg90" />
     </p>
     <p>
     <canvas width="200" height="200"></canvas>
-    <img id="s4" src="#" alt="" />
+    <img id="s4" src="#" alt="" class="rotateimg180"  />
     <canvas width="200" height="200"></canvas>
     </p>
 </body>
